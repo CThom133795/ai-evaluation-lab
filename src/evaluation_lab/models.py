@@ -27,6 +27,7 @@ FAILURE_TYPES = (
     "format_violation",
     "missing_clarification",
     "unsupported_claim",
+    "factual_error",
     "overconfidence",
     "reasoning_error",
     "incorrect_tool_decision",
