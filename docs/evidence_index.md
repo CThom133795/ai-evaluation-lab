@@ -8,6 +8,7 @@ This index maps each capability to the files in this repository that show it. Ev
 | **Evaluation framework (Python)** | [`src/evaluation_lab/`](../src/evaluation_lab/) | Loader, checks, evaluator, clients, runner, CLI. Standard library only |
 | **Model behavior testing** | Dataset categories; [`reports/example_report.md`](../reports/example_report.md) | Instruction following, reasoning, grounding, tool use and adversarial cases, plus a structured report format |
 | **Multi-turn and persona evaluation** | [`case_studies/persona_consistency_voice_drift.md`](../case_studies/persona_consistency_voice_drift.md), cases IF-007 to IF-009, ADV-006 | Observed persona drift written up as an evaluation case; automated multi-turn retention cases |
+| **Grounding and context evaluation of a real application** | [`case_studies/unverified_answers_and_context_carryover.md`](../case_studies/unverified_answers_and_context_carryover.md) | Exploratory finding from the author's own app (Project Pulse), checked against the application's logs: unverified answers, a capability statement that didn't match configuration, and unrelated prior context in responses; classified, with a noted gap in the taxonomy |
 | **Prompt-injection and adversarial testing** | Cases ADV-001 to ADV-006 | Indirect injection, system-prompt extraction, role-play jailbreak, tool-output injection, authority claims, multi-turn social engineering |
 | **Failure classification** | [`qa_artifacts/failure_taxonomy.md`](../qa_artifacts/failure_taxonomy.md), [`evaluator.py`](../src/evaluation_lab/evaluator.py) | 11 failure types with definitions, examples and rules for telling similar types apart; implemented as primary and secondary classification |
 | **Software QA: test planning** | [`qa_artifacts/test_plan.md`](../qa_artifacts/test_plan.md) | Scope, test types, entry/exit criteria, coverage map, risks |
@@ -26,4 +27,4 @@ To keep this index honest:
 
 - **No results from a real model are published yet.** The example report uses hand-written fixture responses and says so. The live-model client is implemented and unit-tested, but no live evaluation has been recorded in `reports/`.
 - **No professional QA employment** is implied. This is an independent portfolio project.
-- **The case study is a single observation** of a live system, with no access to that system's internals.
+- **Each case study is a single, unreproduced observation.** CS-001 had no access to the system's internals. CS-002's configuration is inferred from saved settings and logs, and the application's replies were not logged.
