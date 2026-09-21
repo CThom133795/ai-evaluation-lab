@@ -89,9 +89,11 @@ A model given the release notes above answers *"Version 2.4.0 was released on Ma
 
 The full [example report](reports/example_report.md) grades hand-written fixture responses. Six were deliberately written to fail, to show how the pipeline classifies failures. **They are not output from any model, and the report's pass rate is not a model measurement.**
 
-## Real-World Case Study
+## Real-World Case Studies
 
 **[Persona Consistency and Voice Drift](case_studies/persona_consistency_voice_drift.md):** during a live multi-turn voice session, an assistant's established British-style voice drifted toward a Scottish-sounding accent. I raised the change, restated the preference, and tracked inconsistent recovery until the assistant realigned. In the same session, an explicit correction of a repeated filler phrase was applied successfully. The write-up covers expected vs observed behavior, the intervention sequence, classification, limitations (including that no internal cause is claimed), and follow-up tests. Case [IF-007](evals/instruction_following/) is an automated text-mode analogue.
+
+**[Incorrect Answers and Context Carryover](case_studies/unverified_answers_and_context_carryover.md):** while testing my own application, Project Pulse, I asked about a video game and got repeated incorrect answers. The answers also kept drawing on unrelated earlier conversation context. The write-up classifies the behavior, notes that the current failure taxonomy has no type for irrelevant context carryover, and proposes follow-up tests.
 
 ## Running Locally
 
